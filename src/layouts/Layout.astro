@@ -1,0 +1,75 @@
+---
+import "../styles/global.css";
+import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
+---
+
+<!doctype html>
+<html lang="id" class="dark scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Barber & Co. - Premium Cuts & Care</title>
+		<!-- Fonts -->
+		<link href="https://fonts.googleapis.com" rel="preconnect" />
+		<link
+			crossorigin=""
+			href="https://fonts.gstatic.com"
+			rel="preconnect"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body
+		class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display antialiased selection:bg-primary selection:text-white overflow-x-hidden"
+	>
+		<slot />
+		<FloatingWhatsApp />
+	</body>
+</html>
+
+<style>
+	html,
+	body {
+		margin: 0;
+		width: 100%;
+		min-height: 100%;
+	}
+</style>
+
+<script>
+	const observerOptions = {
+		root: null,
+		rootMargin: "0px",
+		threshold: 0.1,
+	};
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add("is-visible");
+				observer.unobserve(entry.target); // Run once
+			}
+		});
+	}, observerOptions);
+
+	document.addEventListener("astro:page-load", () => {
+		document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+			observer.observe(el);
+		});
+	});
+
+	// Initial load fallback for non-SPA navigation or if astro:page-load doesn't fire immediately
+	document.addEventListener("DOMContentLoaded", () => {
+		document.querySelectorAll(".animate-on-scroll").forEach((el) => {
+			observer.observe(el);
+		});
+	});
+</script>

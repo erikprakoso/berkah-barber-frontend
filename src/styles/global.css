@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+@theme {
+    --color-primary: #e09d29;
+    --color-primary-dark: #c28620;
+    --color-background-light: #f8f7f6;
+    --color-background-dark: #211b11;
+    --color-surface-dark: #2c2419;
+    --color-surface-light: #ffffff;
+
+    --font-display: "Manrope", "sans-serif";
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #211b11;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #463a25;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #e09d29;
+}
+
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Scroll Animation Utilities */
+.animate-on-scroll {
+    opacity: 0;
+    will-change: opacity, transform;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+.fade-up {
+    transform: translateY(30px);
+}
+
+.fade-in {
+    transform: scale(0.95);
+}
+
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+    transition-duration: 0.8s;
+}
+
+/* Slower duration for better effect */
