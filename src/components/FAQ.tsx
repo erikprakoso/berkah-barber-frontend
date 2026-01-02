@@ -6,23 +6,23 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
     return (
         <div className="animate-on-scroll fade-up group rounded-xl bg-surface-dark border border-white/5">
             <button
-                className="flex w-full cursor-pointer items-center justify-between gap-1.5 p-6 text-white text-left"
+                className="flex w-full cursor-pointer items-start justify-between gap-4 p-6 text-white text-left"
                 onClick={() => setIsOpen(!isOpen)}
             >
-                <h3 className="text-lg font-bold">{question}</h3>
-                <span className={`shrink-0 rounded-full p-1.5 sm:p-3 transition-colors ${isOpen ? 'bg-primary text-[#211c12]' : 'bg-white/5 text-white'}`}>
+                <h3 className="text-lg font-bold flex-1 pr-4 leading-relaxed">{question}</h3>
+                <span className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-full transition-colors ${isOpen ? 'bg-primary text-[#211c12]' : 'bg-white/5 text-white'}`}>
                     {isOpen ? (
-                        <span className="material-symbols-outlined block">remove</span>
+                        <span className="material-symbols-outlined text-xl">remove</span>
                     ) : (
-                        <span className="material-symbols-outlined block">add</span>
+                        <span className="material-symbols-outlined text-xl">add</span>
                     )}
                 </span>
             </button>
             <div
-                className={`px-6 pb-6 text-gray-400 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0 pb-0'
+                className={`px-6 text-gray-400 transition-all duration-300 ease-in-out overflow-hidden ${isOpen ? 'max-h-96 opacity-100 pb-6' : 'max-h-0 opacity-0 pb-0'
                     }`}
             >
-                <p>{answer}</p>
+                <p className="leading-relaxed">{answer}</p>
             </div>
         </div>
     );

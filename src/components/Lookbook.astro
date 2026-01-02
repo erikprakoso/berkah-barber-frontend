@@ -1,41 +1,59 @@
+---
+import TestimonialCarousel from "./TestimonialCarousel";
+---
+
 <section id="lookbook" class="py-20 bg-[#1a150d] overflow-hidden">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
             <!-- Testimonial Side -->
             <div class="animate-on-scroll fade-up flex flex-col justify-center">
-                <div class="mb-6">
-                    <span class="material-symbols-outlined text-5xl text-primary/40">format_quote</span>
-                </div>
-                <h2 class="mb-6 text-3xl font-bold leading-tight text-white sm:text-4xl">
-                    "Pelayanan terbaik di kota ini! Potongannya rapi, tempatnya chill banget, dan pomade-nya bikin rambut stay on point seharian."
-                </h2>
-                <div class="flex items-center gap-4">
-                    <div class="h-12 w-12 overflow-hidden rounded-full bg-gray-600">
-                        <img alt="Portrait of happy customer" class="h-full w-full object-cover" data-alt="Portrait of a satisfied male customer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSUy46Z4m7MKfGjCLU4_jvS5nEXs_O0xzlapgj8sNpifspzgvLnQopACkOdtDP5Bed0RWv-FtKi16Rsu4VQ9m3lpFnebdLPAunjDqcsI-r7V19DoENSKAxrdm0REJcgJoktL_pA4jZaO_pBqPn-SCfGy2dbME5JUkONba1GfEDpbHhuO10Lp91-B7sGOEGxWZdKFiDAf4CXa95VyLsQTELqaYt0Eb25P_raY52vuyQCIzOcIiFEiyNPYvUQbVmZGPgqfaJIPtD4Ww"/>
-                    </div>
-                    <div>
-                        <p class="font-bold text-white">Dimas Anggara</p>
-                        <p class="text-sm text-primary">Regular Customer</p>
-                    </div>
-                </div>
+                <TestimonialCarousel client:visible />
             </div>
 
             <!-- Lookbook Grid -->
             <div class="grid grid-cols-2 gap-4">
                 <div class="space-y-4">
-                    <div class="animate-on-scroll fade-in delay-100 h-48 rounded-xl bg-gray-800 overflow-hidden shadow-lg">
-                        <div class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500" data-alt="Close up of a fade haircut" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD148UVhjheMq2dmCe0H__J-jIkxueYTQdM37livI8u4hceUkePl2aRTJ236nLBSy1slSZDyrq7LWevwkO4mAzlD9vzkeD9xxl7JjuMJzSxWsKNjT1SwXrMyIDbjHk1vJwvdqnR-JXAkalrw9Xyt6gRj39tPibl2nyHm5QMHUwzj8U0_qFP_ueznvTMXMrfp0tlAKAa60MVGDk01iuz5WJyKEj9Tdf8eflQgxPEBvenD9uJso0R-rE61Qd9XGoxFmW7QiRM72BLa54');"></div>
+                    <div
+                        class="animate-on-scroll fade-in delay-100 h-48 rounded-xl bg-gray-800 overflow-hidden shadow-lg"
+                    >
+                        <div
+                            class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
+                            data-alt="Close up of a fade haircut"
+                            style="background-image: url('/lookbook-1.webp');"
+                        >
+                        </div>
                     </div>
-                    <div class="animate-on-scroll fade-in delay-200 h-64 rounded-xl bg-gray-800 overflow-hidden shadow-lg">
-                        <div class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500" data-alt="Man with styled pompadour hair" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBHLRsanPLinhqFT70dXEdF0J6fmKo7YWuIc9CuOu-qFSfa7uoKOvTlX-QClNcIBB9TJm--9ATuDdJv9jc9wtg9KRwU87x6cCQwbXCV_ftRz0FnyNxR2c--_RhS9LMvuY7kHOyvf-wQIzQAzaWIayEotz_I_v9zprbkFoEvkTCTE9WQQ8wBHy-RfXPVR8H_4o-Q6s_xf29Yq8FY0GLI4PIpEu1PfhlCe0Uj4uphdmxpG3Y6MPvYpXwOPAc-TnX5GQ94n2XUcYbYLlQ');"></div>
+                    <div
+                        class="animate-on-scroll fade-in delay-200 h-64 rounded-xl bg-gray-800 overflow-hidden shadow-lg"
+                    >
+                        <div
+                            class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
+                            data-alt="Man with styled pompadour hair"
+                            style="background-image: url('/lookbook-2.webp');"
+                        >
+                        </div>
                     </div>
                 </div>
                 <div class="space-y-4 pt-8">
-                    <div class="animate-on-scroll fade-in delay-300 h-64 rounded-xl bg-gray-800 overflow-hidden shadow-lg">
-                        <div class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500" data-alt="Man in barbershop chair looking in mirror" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD_rgtXmR4PG5qqvYVK-3WtjG8w70eTTg0Rzh0iiYD5SK3sdvbAfx4uH9j3WrlV-iGIFwX3259h5BHvlBqu5kNIcIJO3erbXwPz0e_AUrFFDL6PzrRYFLZG2lzhh9OzUIK-Tvpp9Y5UaTGYyBvaazLybtX4HJ2-d_3gNxpHWUsiVOlsyyQTMO9vVowZvg2ct19zTadhF2Dbr-Js9fDiv5HMGG_dUZenhrJ9-cruqm0odwCWM6rg7f1AmRCHCdht6MV2VENkfM2qz4c');"></div>
+                    <div
+                        class="animate-on-scroll fade-in delay-300 h-64 rounded-xl bg-gray-800 overflow-hidden shadow-lg"
+                    >
+                        <div
+                            class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
+                            data-alt="Man in barbershop chair looking in mirror"
+                            style="background-image: url('/lookbook-3.webp');"
+                        >
+                        </div>
                     </div>
-                    <div class="animate-on-scroll fade-in delay-300 h-48 rounded-xl bg-gray-800 overflow-hidden shadow-lg">
-                        <div class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500" data-alt="Barber tools scissors and comb" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBYtynhA7E4W4abuVqE-FCdAG5f5_IqeS2xmvKHNfg0gMkRuS-zBvUU7Lxcb_lHUwLFvOp7GeWmSYI0Khs8yfp8aaspMjTCVOJYhvO_VY_daOzytwlHHliXNwUoO685mMwDg38jOvkn-F_5DKzAX8JEYGA7ZAMhtGZS7lKaZEE1R3-Wm3-pYYsfPUgKBv0Y1pYWuzAt3nQ3BCWUOpvuMBA0LVZ0mD78biMFGNPbgI2zSc96saywbjv7TbB-gLnlT2_eZGQrhQdjeWE');"></div>
+                    <div
+                        class="animate-on-scroll fade-in delay-300 h-48 rounded-xl bg-gray-800 overflow-hidden shadow-lg"
+                    >
+                        <div
+                            class="h-full w-full bg-cover bg-center hover:scale-105 transition-transform duration-500"
+                            data-alt="Barber tools scissors and comb"
+                            style="background-image: url('/lookbook-4.webp');"
+                        >
+                        </div>
                     </div>
                 </div>
             </div>

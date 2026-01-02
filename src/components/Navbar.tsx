@@ -8,12 +8,12 @@ const Navbar = () => {
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
                 <div className="flex h-20 items-center justify-between">
                     {/* Logo */}
-                    <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                    <a href="/" className="flex items-center gap-3 group transition-transform active:scale-95">
+                        <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 text-primary transition-colors group-hover:bg-primary group-hover:text-[#211c12]">
                             <span className="material-symbols-outlined text-2xl">content_cut</span>
                         </div>
-                        <span className="text-xl font-bold tracking-tight text-white">Barber & Co.</span>
-                    </div>
+                        <span className="text-xl font-bold tracking-tight text-white transition-colors group-hover:text-primary">Berkah Barber</span>
+                    </a>
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex md:items-center md:gap-8">
@@ -27,7 +27,7 @@ const Navbar = () => {
                     {/* CTA Button */}
                     <div className="flex items-center gap-4">
                         <a
-                            href="https://wa.me/6281122348654"
+                            href="https://wa.me/6281528420043"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="hidden md:flex cursor-pointer items-center justify-center rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-[#211c12] shadow-lg shadow-primary/20 transition-all hover:bg-primary-dark hover:shadow-primary/30 active:scale-95"
@@ -38,7 +38,7 @@ const Navbar = () => {
 
                         {/* Mobile Menu Button */}
                         <button
-                            className="md:hidden flex items-center justify-center text-white hover:text-primary"
+                            className="md:hidden flex items-center justify-center text-white hover:text-primary cursor-pointer"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                         >
                             <span className="material-symbols-outlined text-3xl">menu</span>
