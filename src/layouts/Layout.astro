@@ -11,6 +11,65 @@ import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Berkah Barber - Premium Cuts & Care</title>
+		<meta
+			name="description"
+			content="Berkah Barber - Potong rambut pria premium dengan layanan terbaik, harga terjangkau, dan produk perawatan rambut berkualitas. Tampil keren dan percaya diri setiap hari."
+		/>
+		<meta
+			name="keywords"
+			content="barbershop, potong rambut pria, cukur rambut, hair styling, pomade, perawatan rambut pria, berkah barber"
+		/>
+		<meta name="author" content="Berkah Barber" />
+		<meta name="theme-color" content="#e09d29" />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://www.berkahbarber.shop/" />
+		<meta
+			property="og:title"
+			content="Berkah Barber - Premium Cuts & Care"
+		/>
+		<meta
+			property="og:description"
+			content="Potong rambut pria premium dengan layanan terbaik dan harga terjangkau. Reservasi sekarang!"
+		/>
+		<meta property="og:image" content="/og-image.jpg" />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://www.berkahbarber.shop/" />
+		<meta
+			property="twitter:title"
+			content="Berkah Barber - Premium Cuts & Care"
+		/>
+		<meta
+			property="twitter:description"
+			content="Potong rambut pria premium dengan layanan terbaik dan harga terjangkau. Reservasi sekarang!"
+		/>
+		<meta property="twitter:image" content="/og-image.jpg" />
+
+		<!-- JSON-LD Schema -->
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BarberShop",
+				"name": "Berkah Barber",
+				"image": "https://www.berkahbarber.shop/og-image.jpg",
+				"description": "Premium cuts and care for men. Layanan potong rambut profesional dan produk perawatan rambut terbaik.",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "Jalan Raya Utama No. 123",
+					"addressLocality": "Jakarta",
+					"addressRegion": "DKI Jakarta",
+					"postalCode": "12345",
+					"addressCountry": "ID"
+				},
+				"priceRange": "$$",
+				"openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 09:00-21:00",
+				"telephone": "+6281528420043"
+			}
+		</script>
+
 		<!-- Fonts -->
 		<link href="https://fonts.googleapis.com" rel="preconnect" />
 		<link

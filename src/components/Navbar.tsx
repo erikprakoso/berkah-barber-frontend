@@ -40,6 +40,7 @@ const Navbar = () => {
                         <button
                             className="md:hidden flex items-center justify-center text-white hover:text-primary cursor-pointer"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
+                            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                         >
                             <span className="material-symbols-outlined text-3xl">menu</span>
                         </button>
