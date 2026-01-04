@@ -21,6 +21,7 @@ import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 		/>
 		<meta name="author" content="Berkah Barber" />
 		<meta name="theme-color" content="#e09d29" />
+		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
 
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
@@ -33,7 +34,10 @@ import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 			property="og:description"
 			content="Potong rambut pria premium dengan layanan terbaik dan harga terjangkau. Reservasi sekarang!"
 		/>
-		<meta property="og:image" content="/og-image.jpg" />
+		<meta
+			property="og:image"
+			content="https://www.berkahbarber.shop/interior-barbershop-vintage-berkah-barber.webp"
+		/>
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
@@ -46,7 +50,10 @@ import FloatingWhatsApp from "../components/FloatingWhatsApp.astro";
 			property="twitter:description"
 			content="Potong rambut pria premium dengan layanan terbaik dan harga terjangkau. Reservasi sekarang!"
 		/>
-		<meta property="twitter:image" content="/og-image.jpg" />
+		<meta
+			property="twitter:image"
+			content="https://www.berkahbarber.shop/interior-barbershop-vintage-berkah-barber.webp"
+		/>
 
 		<!-- JSON-LD Schema -->
 		<script type="application/ld+json">
